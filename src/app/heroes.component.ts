@@ -48,6 +48,7 @@ export class HeroesComponent implements OnInit {
         if (!name) { return; }
         this.heroService.create(name)
                         .then(hero => {
+                            console.log(hero);
                             this.heroes.push(hero);
                             this.selectedHero = null;
                         });
